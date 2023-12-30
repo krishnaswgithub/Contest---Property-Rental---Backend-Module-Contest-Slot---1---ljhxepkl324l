@@ -33,7 +33,7 @@ const createProperty = async (req, res) => {
 
   try {
     const newProperty = await Property.create({ title, location, price, type });
-    res.status(201).json({ message: 'Property created successfully', property: newProperty });
+    res.status(201).json({ message: 'Property added successfully', property: newProperty });
   } catch (error) {
     res.status(500).json({ message: 'Internal server error', error });
   }
